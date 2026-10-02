@@ -1,6 +1,6 @@
 # Web Data API Plan Finder
 
-MCP server that compares web scraping, crawling and SERP API plans against your workload and conditions: the monthly cost of each plan for your volume, and whether each condition (budget, concurrent requests, JavaScript rendering, premium proxies, country targeting, billing of failed requests) is met, not met or unknown, quoted from the provider's official page with the date it was checked.
+MCP server that compares web scraping, crawling and SERP API plans against your workload and conditions: the monthly cost of each plan for your volume, and whether each condition (budget, concurrent requests, JavaScript rendering, premium proxies, country targeting, billing of failed requests) is met, not met or unknown. Every stated value matches the provider's official pricing and documentation as of the check date given with it.
 
 No API key or sign-up. The tools only read the plan list.
 

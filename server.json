@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.scraping-api-plans/web-data-plan-finder",
+  "title": "Web Data API Plan Finder",
+  "description": "Compare web scraping, crawling and SERP API pricing and limits against your workload and budget",
+  "version": "0.1.0",
+  "websiteUrl": "https://plans.intoperson.com/guide",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://plans.intoperson.com/mcp"
+    }
+  ]
+}

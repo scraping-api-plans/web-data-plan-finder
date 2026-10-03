@@ -24,6 +24,14 @@ Customize > Connectors, click "+", then "Add custom connector", and paste this U
 https://plans.intoperson.com/mcp
 ```
 
+### ChatGPT (Plus, Pro, Business, Enterprise and Edu, on the web)
+
+Settings > Security and login, turn on Developer mode. Then open ChatGPT Plugins, click "+", enter a name, choose "No Authentication", and paste this URL under Connection. In a chat, add the app from the tools menu:
+
+```text
+https://plans.intoperson.com/mcp
+```
+
 ### Codex CLI
 
 ```shell

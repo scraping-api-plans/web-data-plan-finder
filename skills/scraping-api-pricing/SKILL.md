@@ -1,6 +1,13 @@
 ---
 name: scraping-api-pricing
 description: Compare web scraping API, SERP API and headless browser plans by monthly cost and conditions. Use when the user asks which scraping, crawling, search results (SERP), proxy or browser API plan fits a workload or a budget, for example "cheapest plan for 100k JavaScript pages a month", "SERP API for 20k Google searches in Germany under $100", "are failed requests billed", "compare Firecrawl and ZenRows". Covers Firecrawl, ScrapingBee, ZenRows, Bright Data, Oxylabs, Zyte, Scrapfly, ScrapingAnt, Scrapingdog, SerpApi, Serper, DataForSEO, SearchCans, Brave Search API, Tavily, Apify and Spider. Each answer carries the sentence from the official pricing page and its check date; a term the page does not state is reported as unknown, not guessed.
+version: 0.1.0
+metadata:
+  openclaw:
+    requires:
+      bins:
+        - curl
+    homepage: https://plans.intoperson.com
 ---
 
 # Scraping API pricing

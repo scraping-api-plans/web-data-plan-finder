@@ -1,8 +1,10 @@
 # Web Data API Plan Finder
 
-MCP server that compares web scraping, crawling and SERP API plans against your workload and conditions: the monthly cost of each plan for your volume, and whether each condition (budget, concurrent requests, JavaScript rendering, premium proxies, country targeting, billing of failed requests) is met, not met or unknown. Every stated value matches the provider's official pricing and documentation as of the check date given with it.
+MCP server that compares web scraping, crawling, SERP and headless browser API plans against your workload and conditions: the monthly cost of each plan for your volume, and whether each condition (budget, concurrent requests, JavaScript rendering, premium proxies, country targeting, billing of failed requests) is met, not met or unknown. Every stated value matches the provider's official pricing and documentation as of the check date given with it.
 
 No API key or sign-up. The tools only read the plan list.
+
+In a test of 30 questions (27 scored for cost) with gpt-5.6-sol (low), answers using this server had 3.6% plan cost errors vs 12.5% with web search alone (95% CI of the difference 1.3–15.9 points). Method, all results and limits: https://plans.intoperson.com/evidence/q3
 
 Remote MCP server (Streamable HTTP): https://plans.intoperson.com/mcp
 

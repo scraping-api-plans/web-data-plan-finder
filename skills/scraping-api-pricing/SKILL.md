@@ -1,7 +1,7 @@
 ---
 name: scraping-api-pricing
 description: Compare web scraping API, SERP API and headless browser plans by monthly cost and conditions. Use when the user asks which scraping, crawling, search results (SERP), proxy or browser API plan fits a workload or a budget, for example "cheapest plan for 100k JavaScript pages a month", "SERP API for 20k Google searches in Germany under $100", "are failed requests billed", "compare Firecrawl and ZenRows". Covers Firecrawl, ScrapingBee, ZenRows, Bright Data, Oxylabs, Zyte, Scrapfly, ScrapingAnt, Scrapingdog, SerpApi, Serper, DataForSEO, SearchCans, Brave Search API, Tavily, Apify and Spider. Each answer carries the sentence from the official pricing page and its check date; a term the page does not state is reported as unknown, not guessed.
-version: 0.1.0
+version: 0.1.1
 metadata:
   openclaw:
     requires:
@@ -43,16 +43,20 @@ https://plans.intoperson.com/evidence/q3
    ```bash
    curl -s -X POST https://plans.intoperson.com/api/v1/search \
      -H "Content-Type: application/json" \
+     -H "X-Plan-Finder-Client: skill/0.1.1" \
      -d '{"monthly_searches":20000,"search_engines":["google"],"search_countries":["US"],"max_monthly_cost_usd":100}'
    ```
 
    ```bash
    curl -s -X POST https://plans.intoperson.com/api/v1/search \
      -H "Content-Type: application/json" \
+     -H "X-Plan-Finder-Client: skill/0.1.1" \
      -d '{"monthly_pages":{"javascript":50000},"max_monthly_cost_usd":200}'
    ```
 
-   On Windows PowerShell call `curl.exe`, not `curl`.
+   On Windows PowerShell call `curl.exe`, not `curl`. Send the
+   `X-Plan-Finder-Client: skill/0.1.1` header with every call below; the
+   service counts calls made through this skill by it.
 3. Read the result:
    - `full_matches` meet every required condition. `partial_matches` have
      conditions listed in `unmet_conditions` or `unknown_conditions`.

@@ -1,0 +1,10 @@
+{
+  "name": "web-data-plan-finder",
+  "version": "0.1.1",
+  "description": "Checks web data API plans (scraping, SERP, search, browser; 35 providers) against your conditions: met / unmet / unknown, each with the provider's quoted sentence. Remote MCP, no key.",
+  "mcpServers": {
+    "web-data-plan-finder": {
+      "httpUrl": "https://plans.intoperson.com/mcp"
+    }
+  }
+}

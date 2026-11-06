@@ -75,6 +75,16 @@ https://plans.intoperson.com/evidence/q3
      shows plan costs as the workload grows.
    - `GET /api/v1/offers/{offer_id}` and `GET /api/v1/products/{product_id}`
      return every recorded fact of a plan or product.
+   - When a job hits the limit of the plan in use (HTTP 429, credits used
+     up, a concurrency cap), call `/api/v1/search` with
+     `"alternatives_to": "<that plan>"`: the result names the cheapest plan of
+     another provider that meets every required condition.
+   - A search or check result carries `watch_changes`, an address that lists
+     the price, limit and terms changes of its plans in the last 30 days. Give
+     it to the user, or call it again before renewing or buying.
+   - Rankings of providers by one feature each (for example a remote MCP
+     server or SOC 2), from the official pages:
+     https://plans.intoperson.com/rank.md
    - Full schema: https://plans.intoperson.com/api/v1/openapi.json
 
 ## How to report
